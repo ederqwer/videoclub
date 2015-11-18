@@ -1,6 +1,8 @@
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -129,10 +131,22 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-            System.out.println("ola");
-           
+            System.out.println("ahi va");
+            String db="jdbc:odbc:Driver=Microsoft Acces Driver (*.mdb);DBQ=videoclub.accdb";
+            System.out.println("ahi va");
+            Connection con = DriverManager.getConnection(db,"","");
+            System.out.println("ahi va");
+            Statement s=con.createStatement();
+            System.out.println("ahi va");
+            String sql="insert into administrador(Password,Nombre,Fecha,Direccion,Telefono)values"+"("+password.getText()+","+nombre.getText()+","+fecha.getText()+
+                    ","+direccion.getText()+","+telefono.getText()+")";
+            System.out.println("ahi va");
+            s.executeUpdate(sql);
+            System.out.println("ahi va");
+            JOptionPane.showMessageDialog(rootPane, "Dato guardado");
+            System.out.println("ahi va");
         }catch (Exception e){
-            System.out.println("no");
+            System.out.println("aqui no");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
