@@ -134,11 +134,17 @@ public class main extends javax.swing.JFrame {
           Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
         System.out.println("si");
         String path = System.getProperty("user.dir");
+           System.out.println(path);
             path += "\\videoclub.accdb";
         String url = "jdbc:odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=" + path;
         System.out.println("no");
         Connection conn = DriverManager.getConnection(url);
         System.out.println("jodER!");  
+        
+        Statement st= conn.createStatement();
+        
+        String up = "INSERT into administrador(Password,Nombre,Fecha,Direccion,Telefono) VALUES('"+password.getText()+"','"+nombre.getText()+"','"+fecha.getText()+"','"+direccion.getText()+"','"+telefono.getText()+"')";
+        st.executeUpdate(up);
         }catch(Exception e){
             System.out.println("MUJAJAJAJA");
         }
