@@ -1,3 +1,7 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -124,8 +128,6 @@ public class main extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         try{
-            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-
             System.out.println("ola");
            
         }catch (Exception e){
