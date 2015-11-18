@@ -10,6 +10,7 @@
  */
 public class main {
     public static void main(String[] args) {
-        System.out.println("clash of clans");//ederalgo
+        System.out.println("clash of clans");
+        System.out.println("somos snipers");//CLAAASH OF CLAAAANS
     }
 }
