@@ -12,5 +12,6 @@ public class main {
     public static void main(String[] args) {
         System.out.println("clash of clans");
         System.out.println("somos snipers");//CLAAASH OF CLAAAANS
+        System.out.println("Aldea anti sniper");
     }
 }
